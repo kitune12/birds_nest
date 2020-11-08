@@ -24,8 +24,8 @@ ul {
 
 .logo{
   float: left;
-  margin-top: 50px;
-  margin-left: 59px;
+  margin-top: 40px;
+  margin-left: 40px;
 }
 
 .global-nav {
@@ -85,24 +85,36 @@ footer small{
 
 
 .btn a{
-  background-color: #009cd3;
-  color: #ffffff;
-  font-size: 20px;
-  font-family: 'bitter', serif;
-  width: 185px;
-  display: block;
-  text-align: center;
-  line-height: 50px;
-  margin-top: 20px;
-  border-radius: 5px;
+
+  width:100px;
+  font-size:20px;
+  font-weight:bold;
+  text-decoration:none;
+  display:block;
+  text-align:center;
+  padding:8px 0 10px;
+  background-image:-webkit-gradient(
+    linear,left top,left bottom,from(#ffa035),to(#8635ff));
 }
 
 
 .btn a:hover{
   text-decoration: none;
   background-color: #ffffff;
-  color: #009cd3;
+  color: #ffa035;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #index footer{
