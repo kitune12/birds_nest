@@ -31,8 +31,26 @@
 
 <p>入会は下のリンクからお願いします。<br>入会前に支払いをしないでください。</p>
 
-<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-<script>paypal.Buttons().render('body');</script>
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AZJnxOKvaWPRzGEeHPTts_j-kmHOg23Z3iflSchewmOe5zmcQCX-OxGqRZWuVfdEQ7655yOCb8yvCGF3&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          'plan_id': 'P-0GM234465X967125BMAR7YGQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID);
+      }
+  }).render('#paypal-button-container');
+</script>
 
 
 
